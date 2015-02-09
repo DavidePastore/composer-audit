@@ -1,0 +1,16 @@
+{
+    "name": "davidepastore/composer-audit",
+    "type": "composer-plugin",
+	"autoload" : {
+		"psr-4" : {
+			"" : "src/"
+		}
+	},
+    "require": {
+        "composer-plugin-api": "1.0.0",
+		"sensiolabs/security-checker": "2.*"
+    },
+	"extra": {
+		"class": "\\DavidePastore\\ComposerAudit\\ComposerAudit"
+	}
+}
