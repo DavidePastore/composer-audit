@@ -1,6 +1,19 @@
 {
     "name": "davidepastore/composer-audit",
+	"description":	"Composer plugin to check your composer.lock",
+	"keywords": [
+		"composer",
+		"plugin",
+		"security-checker"
+	],
     "type": "composer-plugin",
+	"license": "MIT",
+    "authors": [
+        {
+            "name": "Davide Pastore",
+            "email": "pasdavide@gmail.com"
+        }
+    ],
 	"autoload" : {
 		"psr-4" : {
 			"" : "src/"
