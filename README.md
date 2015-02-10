@@ -8,11 +8,11 @@ Using the `composer` command:
 
 Manually adding in composer.json:
 
-    {
-      "require": {
-        "davidepastore/composer-audit": "0.1.0"
-      }
-    }
+```json
+"require": {
+  "davidepastore/composer-audit": "0.1.0"
+}
+```
 
 ## Usage
 The checker will be executed when you launch `composer install` or `composer update`.
