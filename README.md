@@ -4,13 +4,13 @@ A composer plugin that checks if your application uses dependencies with known s
 ## Installation
 Using the `composer` command:
 
-    $ composer require davidepastore/composer-audit:0.1.0
+    $ composer require davidepastore/composer-audit:0.1.*
 
 Manually adding in composer.json:
 
 ```json
 "require": {
-  "davidepastore/composer-audit": "0.1.0"
+  "davidepastore/composer-audit": "0.1.*"
 }
 ```
 

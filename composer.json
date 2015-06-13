@@ -1,28 +1,28 @@
 {
-    "name": "davidepastore/composer-audit",
+	"name": "davidepastore/composer-audit",
 	"description":	"Composer plugin to check your composer.lock",
 	"keywords": [
 		"composer",
 		"plugin",
 		"security-checker"
 	],
-    "type": "composer-plugin",
+	"type": "composer-plugin",
 	"license": "MIT",
-    "authors": [
-        {
-            "name": "Davide Pastore",
-            "email": "pasdavide@gmail.com"
-        }
-    ],
+	"authors": [
+		{
+			"name": "Davide Pastore",
+			"email": "pasdavide@gmail.com"
+		}
+	],
 	"autoload" : {
 		"psr-4" : {
 			"" : "src/"
 		}
 	},
-    "require": {
-        "composer-plugin-api": "1.0.0",
+	"require": {
+		"composer-plugin-api": "^1.0",
 		"sensiolabs/security-checker": "2.*"
-    },
+	},
 	"extra": {
 		"class": "\\DavidePastore\\ComposerAudit\\ComposerAudit"
 	}
