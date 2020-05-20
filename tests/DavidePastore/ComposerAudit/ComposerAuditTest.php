@@ -67,25 +67,25 @@ class ComposerAuditTest extends \PHPUnit_Framework_TestCase
     public function testInstall($packages)
     {
         // Don't proceed if packages haven't changed.
-         if ($packages == self::dump()) {
-             return false;
-         }
+        if ($packages == self::dump()) {
+            return false;
+        }
         putenv('COMPOSER_HOME='.__DIR__.'/../../vendor/bin/composer');
         $this->createComposerJson($packages);
         chdir(storage_dir());
-         // Setup composer output formatter
-         $stream = fopen('php://temp', 'w+');
+        // Setup composer output formatter
+        $stream = fopen('php://temp', 'w+');
         $output = new StreamOutput($stream);
-         // Programmatically run `composer install`
-         $application = new Application();
+        // Programmatically run `composer install`
+        $application = new Application();
         $application->setAutoExit(false);
         $code = $application->run(new ArrayInput(array('command' => 'install')), $output);
-         // remove composer.lock
-         if (file_exists(storage_dir().'composer.lock')) {
-             unlink(storage_dir().'composer.lock');
-         }
-         // rewind stream to read full contents
-         rewind($stream);
+        // remove composer.lock
+        if (file_exists(storage_dir().'composer.lock')) {
+            unlink(storage_dir().'composer.lock');
+        }
+        // rewind stream to read full contents
+        rewind($stream);
 
         return stream_get_contents($stream);
     }
