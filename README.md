@@ -1,4 +1,7 @@
 # composer-audit
+
+[![PSR2 Conformance][ico-styleci]][link-styleci]
+
 A composer plugin that checks if your application uses dependencies with known security vulnerabilities (it uses [SensioLabs Security Checker][1]).
 
 ## Installation
@@ -40,3 +43,7 @@ If you have issues, just open one [here][2].
 
 [1]: https://github.com/sensiolabs/security-checker
 [2]: https://github.com/DavidePastore/composer-audit/issues
+
+[ico-styleci]: https://styleci.io/repos/30546012/shield
+
+[link-styleci]: https://styleci.io/repos/30546012/
