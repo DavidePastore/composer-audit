@@ -19,10 +19,20 @@
 			"" : "src/"
 		}
 	},
+	"autoload-dev": {
+      "psr-4": {
+          "": "tests"
+      }
+  },
 	"require": {
 		"composer-plugin-api": "^1.0",
 		"sensiolabs/security-checker": "2.*"
 	},
+	"require-dev": {
+			"composer/composer": "^1.0",
+      "phpunit/phpunit": "^4.0",
+      "scrutinizer/ocular": "~1.1"
+  },
 	"extra": {
 		"class": "\\DavidePastore\\ComposerAudit\\ComposerAudit"
 	}

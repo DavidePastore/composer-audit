@@ -17,12 +17,13 @@ class ComposerAudit implements PluginInterface, EventSubscriberInterface
     protected $composer;
     protected $io;
     
+
     public function activate(Composer $composer, IOInterface $io)
     {
         $this->composer = $composer;
         $this->io = $io;
     }
-    
+
     public static function getSubscribedEvents()
     {
         return array(
@@ -67,30 +68,31 @@ class ComposerAudit implements PluginInterface, EventSubscriberInterface
             $this->io->write("Please fix these alerts from SensioLabs security advisories.");
         }
     }
-    
+
     /**
      * Get the path of composer.lock file.
+     *
      * @return The path of composer.lock file.
      */
     private function getComposerLockPath()
     {
         $locker = $this->composer->getLocker();
-        
+
         $closure = function () {
             return $this->lockFile;
         };
         //Get the composer.lock file
         $getFile = \Closure::bind($closure, $locker, 'Composer\Package\Locker');
-        
+
         $file = $getFile();
-        
+
         //Get path of composer.lock file
         $closure = function () {
             return $this->path;
         };
-        
+
         $getPath = \Closure::bind($closure, $file, 'Composer\Json\JsonFile');
-        
+
         return $getPath();
     }
 }
