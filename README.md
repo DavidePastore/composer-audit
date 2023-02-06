@@ -1,3 +1,7 @@
+
+> **Warning**
+> This project is not maintained anymore. Since [version 2.4.0-RC1](https://getcomposer.org/changelog/2.4.0-RC1), Composer officially supports the [`audit` command that checks for known security vulnerabilities](https://getcomposer.org/doc/03-cli.md#audit).
+
 # composer-audit
 
 [![PSR2 Conformance][ico-styleci]][link-styleci]
